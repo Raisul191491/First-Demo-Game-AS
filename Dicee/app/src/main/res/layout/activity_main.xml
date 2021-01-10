@@ -34,19 +34,19 @@
 
         <ImageView
             android:id="@+id/image_Leftdice"
-            android:layout_width="148dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/dice2"
-            android:contentDescription="@string/left_dice" />
+            android:contentDescription="@string/left_dice"
+            app:srcCompat="@drawable/dice2" />
 
         <ImageView
             android:id="@+id/image_Rightdice"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/dice1"
-            android:contentDescription="@string/right_dice" />
+            android:contentDescription="@string/right_dice"
+            app:srcCompat="@drawable/dice1" />
     </LinearLayout>
 
     <RelativeLayout

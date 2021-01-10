@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int[] diceArray = {
+        final int[] diceArray = {
                 R.drawable.dice1,
                 R.drawable.dice2,
                 R.drawable.dice3,
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         Button rollButton;
         rollButton =  findViewById(R.id.roll_button);
 
-        ImageView leftDice = findViewById(R.id.image_Leftdice);
-        ImageView rightDice = findViewById(R.id.image_Rightdice);
+        final ImageView leftDice = findViewById(R.id.image_Leftdice);
+        final ImageView rightDice = findViewById(R.id.image_Rightdice);
 
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 Random randgen = new Random();
 
                 int number = randgen.nextInt(6);
+                int num = randgen.nextInt(6);
                 Log.d("Dicee","The random number is "+ number);
+
+                leftDice.setImageResource(diceArray[number]);
+                rightDice.setImageResource(diceArray[num]);
             }
         });
     }
